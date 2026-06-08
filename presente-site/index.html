@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para Anna Clara 💜</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Noto+Serif+KR:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ========== INTRO / ENVELOPE ========== -->
+  <section id="intro">
+    <div class="stars-bg"></div>
+    <div class="envelope-wrapper">
+      <div class="envelope" id="envelope">
+        <div class="envelope-flap"></div>
+        <div class="envelope-body">
+          <div class="envelope-heart">💜</div>
+          <p class="envelope-label">Clique para abrir</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SITE PRINCIPAL ========== -->
+  <main id="main-site" class="hidden">
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero-bg-anim"></div>
+      <canvas id="heartCanvas"></canvas>
+      <div class="hero-content">
+        <p class="hero-pre">✦ Feliz Dia dos Namorados ✦</p>
+        <h1 class="hero-title">Para você,<br/><span class="highlight">meu universo chamado Anna Clara</span></h1>
+        <p class="hero-sub">Cada música, cada passo, cada beat — tudo me lembra você.</p>
+        <a href="#galeria" class="btn-amor">Ver nossa história ↓</a>
+      </div>
+      <div class="floating-notes">
+        <span>♪</span><span>♫</span><span>♬</span><span>♩</span><span>♪</span><span>♫</span>
+      </div>
+    </section>
+
+    <!-- MENSAGEM SECRETA -->
+    <section class="mensagem-section" id="mensagem">
+      <div class="container">
+        <div class="section-tag">💌 mensagem secreta</div>
+        <div class="mensagem-card" id="mensagemCard">
+          <div class="mensagem-front">
+            <p class="msg-emoji">💜</p>
+            <p class="msg-hint">Clique para revelar sua mensagem</p>
+          </div>
+          <div class="mensagem-back">
+            <!-- ✏️ EDITE SUA MENSAGEM AQUI -->
+            <p class="msg-text">
+              Você é minha música favorita, aquela que toca no fundo de tudo que faço.
+              Assim como o BTS canta sobre amor e sonhos, eu sonho com você todo dia.
+              E assim como Michael Jackson encantou o mundo, você encantou meu coração
+              de um jeito que ninguém mais conseguiu. Te amo infinito. 💜
+            </p>
+            <p class="msg-assinatura">— Do seu Matchatcho William 🖤</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIA DE FOTOS -->
+    <section class="galeria-section" id="galeria">
+      <div class="container">
+        <div class="section-tag">📸 nossa história</div>
+        <h2 class="section-title">Momentos que guardo<br/>no coração</h2>
+        <div class="galeria-grid" id="galeriaGrid">
+          <!-- As fotos são carregadas pelo JS — edite em js/fotos.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- PLAYER MUSICAL FALSO (decorativo + tocável) -->
+    <section class="player-section" id="player">
+      <div class="container">
+        <div class="section-tag">🎵 nossa playlist</div>
+        <h2 class="section-title">Músicas que me<br/>lembram você</h2>
+        <div class="playlist-wrapper">
+          <div class="vinyl-disc" id="vinyl">
+            <div class="vinyl-center">💜</div>
+          </div>
+          <div class="playlist-tracks" id="playlistTracks">
+            <!-- Músicas carregadas pelo JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUIZ DO AMOR -->
+    <section class="quiz-section" id="quiz">
+      <div class="container">
+        <div class="section-tag">💬 quiz do amor</div>
+        <h2 class="section-title">Você me conhece?</h2>
+        <div class="quiz-card" id="quizCard">
+          <div class="quiz-question" id="quizQuestion"></div>
+          <div class="quiz-options" id="quizOptions"></div>
+          <div class="quiz-result hidden" id="quizResult"></div>
+          <div class="quiz-progress">
+            <span id="quizNum">1</span> / <span id="quizTotal">5</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MOONWALK / EASTER EGG BTS -->
+    <section class="easter-section" id="easter">
+      <div class="container">
+        <div class="section-tag">🕺 surpresa especial</div>
+        <h2 class="section-title">Clique em uma das opções<br/>para uma surpresa</h2>
+        <div class="easter-btns">
+          <button class="easter-btn" id="btnMoonwalk">🎤 Moonwalk</button>
+          <button class="easter-btn" id="btnBTS">💜 BTS Forever</button>
+        </div>
+        <div class="easter-display" id="easterDisplay"></div>
+      </div>
+    </section>
+
+    <!-- CONTAGEM DE AMOR -->
+    <section class="contador-section" id="contador">
+      <div class="container">
+        <div class="section-tag">⏳ nosso tempo juntos</div>
+        <h2 class="section-title">Cada segundo<br/>ao seu lado vale tudo</h2>
+        <div class="contador-grid" id="contadorGrid">
+          <!-- Gerado pelo JS -->
+        </div>
+        <p class="contador-label">dias, horas, minutos e segundos de amor 💜</p>
+      </div>
+    </section>
+
+    <!-- CARTA FINAL -->
+    <section class="carta-section" id="carta">
+      <div class="container">
+        <div class="carta-envelope-anim">
+          <div class="carta-box">
+            <h2 class="carta-title">Feliz Dia dos Namorados</h2>
+            <!-- ✏️ EDITE A CARTA AQUI -->
+            <p class="carta-text">
+              Anna Matchatcha,<br/><br/>
+              Desde o dia que você entrou na minha vida, tudo ficou mais colorido.
+              Você me ensinou que o amor pode ser tão intenso quanto uma música do BTS
+              e tão poderoso quanto uma performance do Michael Jackson.<br/><br/>
+              Obrigado por cada risada, cada abraço, cada momento.
+              Quero viver cada beat dessa vida ao seu lado.<br/><br/>
+              Com todo o meu amor, descilpa ser tão chato e te cobrar de mais, só quero que sejamos bons um para o outro.
+              Me desculpa não estar conseguindo ser presente pessoalmente, principalmente em uma data tão importante.
+              espero que tenhamos paciencia para resolver o que tiver para resolver e que um dia estejamos todos os dias um do lado do outro!!<br/>
+              <em>Seu moziiiin William 💜</em>
+            </p>
+            <div class="carta-btns">
+              <button class="btn-amor" id="btnConfetti">🎉 Celebrar!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>Feito com 💜 do William especialmente para você</p>
+      <p class="footer-sub">BTS 💜 Michael Jackson 🎤 Nosso amor 💜</p>
+    </footer>
+
+  </main>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox hidden" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">✕</button>
+    <img src="" alt="" id="lightboxImg" />
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+  </div>
+
+  <!-- CONFETTI CANVAS -->
+  <canvas id="confettiCanvas"></canvas>
+
+  <!-- SCRIPTS -->
+  <script src="js/fotos.js"></script>
+  <script src="js/playlist.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
